@@ -1,14 +1,21 @@
 {
   "name": "@elonehoo/vitepress-plugin-tabs",
+  "type": "module",
   "version": "0.0.0",
   "description": "A plugin that adds syntax for showing content in tabs.",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "plugin",
+    "tabs"
+  ],
   "exports": {
     ".": "./dist/index.js",
     "./client": "./src/client/index.ts"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "client.ts",
@@ -18,13 +25,6 @@
     "dev": "tsup --watch",
     "build": "tsup"
   },
-  "keywords": [
-    "vitepress",
-    "plugin",
-    "tabs"
-  ],
-  "author": "Elone Hoo <hi@elonehoo.me>",
-  "license": "MIT",
   "dependencies": {
     "vitepress": "1.0.0-alpha.43",
     "vue": "^3.2.45"

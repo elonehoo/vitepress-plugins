@@ -11,7 +11,7 @@ const props = defineProps<{
 
 const { selected, select } = useTabs(
   toRef(props, 'tabLabels'),
-  toRef(props, 'sharedStateKey')
+  toRef(props, 'sharedStateKey'),
 )
 
 const tablist = ref<HTMLDivElement>()
@@ -25,11 +25,12 @@ const onKeydown = (e: KeyboardEvent) => {
   let selectIndex: number | undefined
 
   if (e.key === 'ArrowLeft') {
-    selectIndex =
-      currentIndex >= 1 ? currentIndex - 1 : props.tabLabels.length - 1
-  } else if (e.key === 'ArrowRight') {
-    selectIndex =
-      currentIndex < props.tabLabels.length - 1 ? currentIndex + 1 : 0
+    selectIndex
+      = currentIndex >= 1 ? currentIndex - 1 : props.tabLabels.length - 1
+  }
+  else if (e.key === 'ArrowRight') {
+    selectIndex
+      = currentIndex < props.tabLabels.length - 1 ? currentIndex + 1 : 0
   }
 
   if (selectIndex !== undefined) {

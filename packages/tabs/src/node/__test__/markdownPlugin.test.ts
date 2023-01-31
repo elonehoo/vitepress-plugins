@@ -1,7 +1,7 @@
 import MarkdownIt from 'markdown-it'
-import { test, expect } from 'vitest'
-import { tabsPlugin } from '../markdownPlugin'
+import { expect, test } from 'vitest'
 import dedent from 'ts-dedent'
+import { tabsPlugin } from '../markdownPlugin'
 
 const setup = () => {
   const md = MarkdownIt()

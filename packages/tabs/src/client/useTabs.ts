@@ -1,8 +1,9 @@
-import { ref, computed, reactive, inject, watch } from 'vue'
-import type { App, Ref, InjectionKey } from 'vue'
+import { computed, inject, reactive, ref, watch } from 'vue'
+import type { App, InjectionKey, Ref } from 'vue'
 
 type TabsSharedState = Record<string, string>
 
+/* eslint-disable symbol-description */
 const injectionKey: InjectionKey<TabsSharedState> = Symbol()
 const ls = typeof localStorage !== 'undefined' ? localStorage : null
 const localStorageKey = 'vitepress:tabsSharedState'
@@ -12,18 +13,20 @@ const getLocalStorageValue = (): TabsSharedState => {
   if (rawValue) {
     try {
       return JSON.parse(rawValue)
-    } catch {}
+    }
+    catch {}
   }
   return {}
 }
 const setLocalStorageValue = (v: TabsSharedState) => {
-  if (!ls) return
+  if (!ls)
+    return
   ls.setItem(localStorageKey, JSON.stringify(v))
 }
 
 export const provideTabsSharedState = (app: App) => {
   const state = reactive(getLocalStorageValue())
-  watch(state, newState => {
+  watch(state, (newState) => {
     setLocalStorageValue(newState)
   })
 
@@ -32,12 +35,12 @@ export const provideTabsSharedState = (app: App) => {
 
 export const useTabs = <T extends string>(
   acceptValues: Ref<T[]>,
-  sharedStateKey: Ref<string | undefined>
+  sharedStateKey: Ref<string | undefined>,
 ) => {
   const sharedState = inject(injectionKey)
   if (!sharedState) {
     throw new Error(
-      '[vitepress-plugin-tabs] TabsSharedState should be injected'
+      '[vitepress-plugin-tabs] TabsSharedState should be injected',
     )
   }
 
@@ -49,25 +52,23 @@ export const useTabs = <T extends string>(
       const acceptVals = acceptValues.value
       if (key) {
         const value = sharedState[key]
-        if (value && (acceptVals as string[]).includes(value)) {
+        if (value && (acceptVals as string[]).includes(value))
           return value as T
-        }
-      } else {
+      }
+      else {
         const nonSharedStateVal = nonSharedState.value
-        if (nonSharedStateVal) {
+        if (nonSharedStateVal)
           return nonSharedStateVal
-        }
       }
       return acceptVals[0]
     },
     set(v) {
       const key = sharedStateKey.value
-      if (key) {
+      if (key)
         sharedState[key] = v
-      } else {
+      else
         nonSharedState.value = v
-      }
-    }
+    },
   })
   const select = (newValue: T) => {
     selected.value = newValue

@@ -1,6 +1,6 @@
-import { test, expect } from 'vitest'
-import { parseTabsContent } from '../parseTabsContent'
+import { expect, test } from 'vitest'
 import dedent from 'ts-dedent'
+import { parseTabsContent } from '../parseTabsContent'
 
 test('normal content', () => {
   const result = parseTabsContent(dedent`
