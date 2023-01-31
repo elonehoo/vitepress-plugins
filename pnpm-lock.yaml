@@ -27,6 +27,19 @@ importers:
       tsup: 6.5.0_typescript@4.9.5
       vitest: 0.28.3_@vitest+ui@0.28.3
 
+  packages/npm-commands:
+    specifiers:
+      '@elonehoo/vitepress-plugin-tabs': workspace:*
+      '@types/markdown-it': ^12.2.3
+      markdown-it: ^13.0.1
+      vitepress: 1.0.0-alpha.43
+    dependencies:
+      '@elonehoo/vitepress-plugin-tabs': link:../tabs
+      vitepress: 1.0.0-alpha.43_2r467mdhb7mblpaox4bg7fatdi
+    devDependencies:
+      '@types/markdown-it': 12.2.3
+      markdown-it: 13.0.1
+
   packages/tabs:
     specifiers:
       '@types/markdown-it': ^12.2.3

@@ -1,0 +1,33 @@
+{
+  "name": "@elonehoo/vitepress-plugin-npm-commands",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A plugin that adds syntax for showing `npm`, `yarn`, `pnpm` commands in tabs.",
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "plugin",
+    "npm-commands"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@elonehoo/vitepress-plugin-tabs": "workspace:*",
+    "vitepress": "1.0.0-alpha.43"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "markdown-it": "^13.0.1"
+  }
+}
