@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "description": "VitePress plugin collection",
   "scripts": {
+    "test": "vitest",
+    "test:ui":"vitest --ui",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -20,8 +22,12 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.1",
     "@types/node": "^18.11.18",
+    "@vitest/ui": "^0.28.3",
     "bumpp": "^8.2.1",
+    "c8": "^7.12.0",
     "eslint": "^8.33.0",
-    "tsup": "^6.5.0"
+    "ts-dedent": "^2.2.0",
+    "tsup": "^6.5.0",
+    "vitest": "^0.28.3"
   }
 }
