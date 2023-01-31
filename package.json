@@ -1,0 +1,27 @@
+{
+  "name": "vitepress-plugins",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "VitePress plugin collection",
+  "scripts": {
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "vitepress",
+    "plugins"
+  ],
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.1",
+    "@types/node": "^18.11.18",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.33.0",
+    "tsup": "^6.5.0"
+  }
+}
