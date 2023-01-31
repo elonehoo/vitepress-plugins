@@ -27,6 +27,20 @@ importers:
       tsup: 6.5.0_typescript@4.9.5
       vitest: 0.28.3_@vitest+ui@0.28.3
 
+  docs:
+    specifiers:
+      '@elonehoo/vitepress-plugin-detype': workspace:^0.0.0
+      '@elonehoo/vitepress-plugin-npm-commands': workspace:^0.0.0
+      '@elonehoo/vitepress-plugin-tabs': workspace:^0.0.0
+      vitepress: 1.0.0-alpha.43
+      vue: ^3.2.45
+    dependencies:
+      '@elonehoo/vitepress-plugin-detype': link:../packages/detype
+      '@elonehoo/vitepress-plugin-npm-commands': link:../packages/npm-commands
+      '@elonehoo/vitepress-plugin-tabs': link:../packages/tabs
+      vitepress: 1.0.0-alpha.43_2r467mdhb7mblpaox4bg7fatdi
+      vue: 3.2.45
+
   packages/detype:
     specifiers:
       '@elonehoo/vitepress-plugin-tabs': workspace:*

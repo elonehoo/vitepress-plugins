@@ -1,0 +1,18 @@
+{
+  "name": "@vitepress-plugins/docs",
+  "private": "true",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "dependencies": {
+    "@elonehoo/vitepress-plugin-detype": "workspace:*",
+    "@elonehoo/vitepress-plugin-npm-commands": "workspace:*",
+    "@elonehoo/vitepress-plugin-tabs": "workspace:*",
+    "vitepress": "1.0.0-alpha.43",
+    "vue": "^3.2.45"
+  }
+}
