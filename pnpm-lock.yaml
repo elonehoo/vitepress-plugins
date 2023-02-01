@@ -29,9 +29,9 @@ importers:
 
   docs:
     specifiers:
-      '@elonehoo/vitepress-plugin-detype': workspace:^0.0.0
-      '@elonehoo/vitepress-plugin-npm-commands': workspace:^0.0.0
-      '@elonehoo/vitepress-plugin-tabs': workspace:^0.0.0
+      '@elonehoo/vitepress-plugin-detype': workspace:*
+      '@elonehoo/vitepress-plugin-npm-commands': workspace:*
+      '@elonehoo/vitepress-plugin-tabs': workspace:*
       vitepress: 1.0.0-alpha.43
       vue: ^3.2.45
     dependencies:
