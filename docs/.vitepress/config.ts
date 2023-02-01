@@ -73,6 +73,6 @@ export default defineConfig({
     ],
   },
   vite: {
-    plugins: [detypeVitePlugin()]
-  }
+    plugins: [detypeVitePlugin()],
+  },
 })

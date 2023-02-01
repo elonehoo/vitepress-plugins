@@ -1,13 +1,20 @@
 {
   "name": "@elonehoo/vitepress-plugin-detype",
+  "type": "module",
   "version": "0.0.1",
   "description": "A plugin that adds syntax for generating js from ts code snippet.",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "plugin",
+    "detype"
+  ],
   "exports": {
     ".": "./dist/index.js"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -15,13 +22,6 @@
     "dev": "tsup --watch",
     "build": "tsup"
   },
-  "keywords": [
-    "vitepress",
-    "plugin",
-    "detype"
-  ],
-  "author": "Elone Hoo <hi@elonehoo.me>",
-  "license": "MIT",
   "dependencies": {
     "@elonehoo/vitepress-plugin-tabs": "workspace:*",
     "detype": "^0.6.2",

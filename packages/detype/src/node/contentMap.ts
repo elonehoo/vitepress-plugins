@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto'
 
 type ResultOrError = { result: string } | { error: unknown }
 
-export type ContentMap = {
+export interface ContentMap {
   /**
    * @returns key
    */
@@ -20,15 +20,15 @@ export const createContentMap = (): ContentMap => {
   return {
     add(frontmatter, input, output) {
       const key = generateKey(`${frontmatter}_${input}`)
-      if (!map.has(key)) {
+      if (!map.has(key))
         map.set(key, output)
-      }
+
       return key
     },
     async get(key) {
       const val = map.get(key)
       return val
-    }
+    },
   }
 }
 

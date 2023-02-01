@@ -1,7 +1,7 @@
-import { createServer } from 'vitepress'
-import { expect, test } from 'vitest'
 import url from 'node:url'
 import path from 'node:path'
+import { createServer } from 'vitepress'
+import { expect, test } from 'vitest'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 

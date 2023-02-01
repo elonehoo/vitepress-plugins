@@ -1,6 +1,6 @@
 export const name = 'VitePress Plugins'
 export const shortName = 'vitepress plugins'
-export const description = "elonehoo's vitepress plugins"
+export const description = 'elonehoo\'s vitepress plugins'
 
 /* CDN fonts and styles */
 export const googleapis = 'https://fonts.googleapis.com'
