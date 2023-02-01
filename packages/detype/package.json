@@ -1,6 +1,6 @@
 {
   "name": "@elonehoo/vitepress-plugin-detype",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A plugin that adds syntax for generating js from ts code snippet.",
   "type": "module",
   "main": "./dist/index.js",

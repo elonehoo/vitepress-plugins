@@ -1,6 +1,6 @@
 {
   "name": "vitepress-plugins",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": "true",
   "description": "VitePress plugin collection",
   "author": "Elone Hoo <hi@elonehoo.me>",
@@ -12,9 +12,9 @@
   "scripts": {
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "docs:dev":"pnpm -C docs run dev",
-    "docs:build":"pnpm -C docs run build",
-    "docs:preview":"pnpm -C docs run preview",
+    "docs:dev": "pnpm -C docs run dev",
+    "docs:build": "pnpm -C docs run build",
+    "docs:preview": "pnpm -C docs run preview",
     "dev": "pnpm run --filter \"./packages/**\" -r dev",
     "build": "pnpm run --filter \"./packages/**\" -r build",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
