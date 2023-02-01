@@ -58,7 +58,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-PRESENT Elone Hoo',
     },
     nav: [
-      { text: 'detype', link: '/detype:/' },
+      { text: 'detype', link: '/detype/' },
       { text: 'tabs', link: '/tabs/' },
       { text: 'npm-commands', link: '/npm-commands/' },
       {
