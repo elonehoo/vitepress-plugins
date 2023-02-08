@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "pnpm -C ../ run build && vitepress build",
     "preview": "vitepress preview"
   },
   "dependencies": {
