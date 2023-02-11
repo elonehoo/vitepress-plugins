@@ -1,6 +1,7 @@
 {
   "name": "vitepress-plugins",
   "version": "0.0.1",
+  "type": "module",
   "private": "true",
   "description": "VitePress plugin collection",
   "author": "Elone Hoo <hi@elonehoo.me>",
