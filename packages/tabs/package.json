@@ -1,7 +1,7 @@
 {
   "name": "@elonehoo/vitepress-plugin-tabs",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plugin that adds syntax for showing content in tabs.",
   "author": "Elone Hoo <hi@elonehoo.me>",
   "license": "MIT",
